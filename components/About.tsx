@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const About: React.FC = () => {
@@ -11,16 +12,19 @@ const About: React.FC = () => {
             <div className="relative w-64 h-64 md:w-72 md:h-72 group">
               <div className="absolute inset-0 rounded-full bg-primary/20 blur-2xl animate-pulse group-hover:bg-primary/30 transition-all duration-500"></div>
               {/* 
-                 NOTE: 
-                 1. Create a folder named 'public' in your project root.
-                 2. Move your image into the 'public' folder.
-                 3. Rename it to 'profile.png' (since your screenshot indicated it is a PNG file).
+                  IMPORTANT: 
+                  For this image to load, you MUST create a folder named 'public' 
+                  in your project root and put 'profile.png' inside it.
               */}
               <img 
                 src="/profile.png" 
                 alt="Tianyi Luo"
                 className="relative h-full w-full rounded-full border-4 border-primary/50 shadow-2xl object-cover bg-surface-dark"
-                
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  // Fallback placeholder if image is missing
+                  target.src = 'https://via.placeholder.com/400x400/1e293b/ffffff?text=TL';
+                }}
               />
             </div>
           </div>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Hero: React.FC = () => {
@@ -25,6 +26,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 px-4 flex flex-col items-center gap-8 max-w-4xl text-center animate-fade-in-up">
+        
         <div className="flex flex-col gap-4">
           <h1 className="text-white text-5xl sm:text-6xl md:text-7xl font-black leading-tight tracking-[-0.033em]">
             Tianyi Luo
