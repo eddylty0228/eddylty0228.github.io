@@ -1,85 +1,86 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-
-<head>
-    <meta charset="UTF-8" />
+<html lang="en" class="dark scroll-smooth" style="scroll-padding-top: 5rem;">
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tianyi Luo – Home</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Tianyi Luo | Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+              "surface-dark": "#1e293b", // Slightly lighter dark for cards
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px",
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px)",
+            }
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #101622; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #135bec; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
-
-<body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Tianyi Luo</a>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button id="themeToggle" class="toggle" aria-pressed="false" title="Toggle dark mode">🌙</button>
-        </nav>
-    </header>
-
-
-    <main>
-        <section class="hero">
-            <div class="profile-section">
-                <div class="profile-image">
-                    <img src="pictures/F8E7EBEB-9137-48DB-ABB3-324F871BBFAF.png" alt="Tianyi Luo Profile Picture" />
-                </div>
-                <div class="hero-content">
-                    <h1>Hi, I'm Tianyi Luo 👋</h1>
-                    <p>I'm a developer passionate about creating AI-driven web apps and data tools, machine learning and its potential to solve complex real-world problems through intelligent automation.</p>
-                    <a class="btn" href="projects.html">View My Projects</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="what-i-do">
-            <h2>What I Do</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>🧑‍💻 Software Development</h3>
-                    <p>Building robust applications using modern programming frameworks and software engineering principles to solve real-world problems.</p>
-                </div>
-                <div class="card">
-                    <h3>💻 Web Development</h3>
-                    <p>Creating responsive, modern web applications with clean code and great user experiences.</p>
-                </div>
-                <div class="card">
-                    <h3>📊 Data Analysis</h3>
-                    <p>Transforming raw data into actionable insights using Python, SQL, and visualization tools.</p>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="highlights">
-            <h2>Recent Highlights</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>🎓 Education</h3>
-                    <p>Computer and Information Technology student at Purdue University, Minor in Finance.  </p>
-                    <p>Expected graduation date: December 2025</p>
-                </div>
-                <div class="card">
-                    <h3>🚀 Current Focus</h3>
-                    <p>Currently learning machine learning to build data-driven intelligent applications. Working on innovative solutions that combine design, data, and programming to create impactful applications.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-    <footer>
-        <p>© <span id="year"></span> Tianyi Luo</p>
-    </footer>
-    
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" title="Back to top">↑</button>
-    
-    <script src="js/main.js"></script>
+  <body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
-
 </html>
