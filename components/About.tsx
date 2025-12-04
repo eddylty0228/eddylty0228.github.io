@@ -24,7 +24,7 @@ const About: React.FC = () => {
                   const target = e.target as HTMLImageElement;
                   // Try jpg if png fails, or fallback to placeholder
                   if (target.src.endsWith('png')) {
-                    target.src = '/profile.jpg';
+                    target.src = '/profile.png';
                   } else {
                     target.src = 'https://via.placeholder.com/400x400/1e293b/ffffff?text=Tianyi+Luo';
                   }
