@@ -20,15 +20,7 @@ const About: React.FC = () => {
                 src="/profile.png" 
                 alt="Tianyi Luo"
                 className="relative h-full w-full rounded-full border-4 border-primary/50 shadow-2xl object-cover bg-surface-dark"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  // Try jpg if png fails, or fallback to placeholder
-                  if (target.src.endsWith('png')) {
-                    target.src = '/profile.png';
-                  } else {
-                    target.src = 'https://via.placeholder.com/400x400/1e293b/ffffff?text=Tianyi+Luo';
-                  }
-                }}
+                
               />
             </div>
           </div>
